@@ -1,0 +1,402 @@
+\documentclass{article}
+
+\usepackage{url} 
+\usepackage{geometry,afterpage}
+\usepackage{pdfpages}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\usepackage{ngerman}
+\usepackage{listings}
+
+\usepackage{floatrow}
+\usepackage[tableposition=top]{caption}
+\floatsetup[table]{capposition=top}
+
+\usepackage{amsmath, amssymb}
+
+\usepackage[utf8]{inputenc}
+
+
+\usepackage[numbib]{tocbibind}
+
+
+
+\newcommand\twodigits[1]{%
+   \ifnum#1<10 0#1\else #1\fi
+}
+
+
+
+\lhead{Röntgenbeugung}
+\rhead{\today \\ J. Winkler}
+%\cfoot{\twodigits{\thepage}~/ \pageref{LastPage}}
+\cfoot{{\thepage}~/ \pageref{LastPage}}
+
+\begin{document}
+
+\parindent0cm
+
+
+\includepdf{Deckblatt_neu_custom.pdf}
+
+
+\pagestyle{fancy}
+
+\section{Aufgabenstellung}
+
+Die für das Experiment nötigen Daten inklusive der Aufgabenstellung wurden zur Verfügung gestellt. 
+
+\begin{enumerate}
+\item Bestimmung der Gitterkonstante von NaCl
+\item Bestimmung der Gitterkonstante eines unbekannten Kristalls
+\item Identifiation des unbekannten Kristalls
+\item Berechnung der Grenzwellenlänge $\lambda_{\min}$ des Bremsstrahlungskontinuums in Abhängigkeit von der Spannung
+\item Berechnung des Planck'schen Wirkungsquantums 
+\end{enumerate}
+
+
+\section{Grundlagen}
+
+Röntgenstrahlung wird zur Bestimmung der Struktur fester Körper verwendet. Diese Strahlung besteht aus elektromagnetischen Wellen mit der Wellenlänge $10^{-12}$~m bis $10^{-10}$~m. Röntgenstrahlung entsteht beim Abbremsen von Elektronen und wird daher auch Bremsstrahlung genannt. Die schematische Darstellung einer Röntgenröhre befindet sich in Abbildung~\ref{fig:roentgenroehre}.
+
+
+
+\begin{figure}[H]
+\includegraphics[scale=1.8]{roehre.png}
+\caption{Der schematische Aufbau einer Röntgenröhre. In der Glühkathode werden Elektronen beschleunigt. Diese werden an der Anode abgebremst. Dadurch entsteht Röntgenstrahlung.}
+\label{fig:roentgenroehre}
+\end{figure}
+
+
+
+\begin{figure}[H]
+\includegraphics[scale=1.8]{alpha_beta.png}
+\caption{Das Röntgenspektrum.}
+\label{fig:roentgenspektrum}
+\end{figure}
+
+Das Spektrum der Bremsstrahlung ist kontinuierlich. Allerdings werden zusätzlich durch das Auftreffen der Elektronen die Atome der Anode ionisiert. Durch die Ionisation werden in der Atomhüller Löcher frei. Dadurch werden Energieniveaus der Elektronen verändert und die Energiedifferenz der Niveaus wird abgestrahlt. Das daraus entstehende so genannte \textit{Linienspektrum} besitzt zwei Maxima $K_\alpha$ und $K_\beta$, abhängig von den betroffenen Energieniveaus der ionisierten Elektronen. Es ist zu beobachten, dass $K_\beta$ eine höhere Energie aufweisen als $K_\alpha$ (daher kleinere Wellenlänge), aber dafür eine geringere Intensität, weil die $K_\alpha$-Ionisation häufiger vorkommt. Das Linienspektrum wird mit dem Bremsstrahlenspektrum überlagert und ist für jedes Material charakteristisch.
+
+
+In Abbildung~\ref{fig:roentgenspektrum} sieht man zusätzlich noch $\lambda_{\min}$ eingezeichnet. Hierbei handelt es sich um die Grenzwellenlänge, also die minimale Wellenlänge von Röntgenstrahlung.
+
+
+
+\begin{figure}[H]
+\includegraphics[scale=1.5]{bragg.png}
+\caption{Veranschaulichung der Bragg-Bedingung.}
+\label{fig:bragg}
+\end{figure}
+
+
+Für die Bestimmung der Gitterkonstante $a=2\cdot d$ wird gemäß \cite{moodle} die Bragg-Bedingung (siehe Abbildung~\ref{fig:bragg}) verwendet
+\begin{align}
+\label{eq:bragg}
+n\cdot \lambda = 2\cdot d \cdot \sin(\vartheta)
+\end{align}
+verwendet, wobei $\lambda$ die Wellenlänge der $K_{\alpha}$ bzw. $K_{\beta}$ Strahlung in \cite{moodle} gegeben ist.
+\begin{align}
+\lambda(K_\alpha) &= (71.080 \pm 0.001)~\text{pm} \\
+\lambda(K_\beta) &= (63.095 \pm 0.001)~\text{pm} 
+\end{align}
+
+Zusätzlich ist noch bekannt, dass es zwischen der Spannung und der Grenzwellenlänge folgenden Zusammenhang gibt
+\begin{align}
+\lambda_{\min} = \frac{h\cdot c}{e\cdot U}\label{eq:planck_formel}
+\end{align}
+wobei $c$ die Vakuumlichtgeschwindigkeit und $e$ die Elementarladung ist. Wenn $\lambda_{\min}$ und $U$ bekannt sind, kann damit das Planck'sche Wirkungsquantum näherungsweise bestimmt werden.
+
+
+
+
+\section{Versuchsaufbau}
+
+
+\begin{figure}[H]
+\includegraphics[scale=1]{aufbau.png}
+\caption{Das Röntgengerät als Versuchsaufbau inkl. Beschreibung der Komponenten.}
+\end{figure}
+
+
+\begin{figure}[H]
+\includegraphics[scale=1]{versuch1.png}
+\caption{Versuchsaufbau, dabei ist der \textbf{Kollimator} mit 1 markiert, der zu überprüfende \textbf{Kristall} mit 2 und an der Stelle 3 ist das \textbf{Zählrohr}.}
+\end{figure}
+
+
+\section{Geräteliste}
+
+
+\begin{table}[H]
+\caption{Liste der verwendeten Geräte}
+
+~
+
+\begin{tabular}{l|l}
+Bezeichnung & Inventarnummer  \\
+\hline
+Röntgengerät & 554 811  \\
+NaCl-Kristall &   \\
+Kristall aus unbekannten Material & \\
+Computer & \\
+Geiger-Müller-Zählrohr & \\
+CASSY-Lab Interface 
+\end{tabular}
+
+\end{table}
+
+
+\section{Durchführung und Messergebnisse}
+
+\subsection{Analyse von Kristallen}
+Die Ergebnisse wurden gemessen und als Datensatz zur Verfügung gestellt. Der Vollständigkeit halber werden die Daten nochmals tabellarisch dargestellt. In Tabelle~\ref{tab:nacl} werden die Messergebnisse vom NaCl-Kristall zusammengefasst. Die Daten des unbekannten Kristalls sind in Tabelle~\ref{tab:kristall}.
+
+Zum besseren Vergleich der Daten wurden diese in Abbildung~\ref{fig:daten} in ein gemeinsames Koordinatensystem eingezeichnet.
+
+\begin{figure}[H]
+\includegraphics[scale=1]{daten.png}
+\caption{Daten der beiden Kristalle}
+\label{fig:daten}
+\end{figure}
+
+
+\newpage
+\begin{table}[H]
+\caption{Begungsdaten für NaCl. $\beta$ in $^\circ$, rate in imp/s.}
+\small
+\begin{tabular}{rr|rr|rr|rr|rr|rr}
+$\beta$ & rate & $\beta$ & rate & $\beta$ & rate & $\beta$ & rate & $\beta$ & rate & $\beta$ & rate \\
+\hline
+\input{nacl_tab}
+\end{tabular}
+\label{tab:nacl}
+\end{table}
+
+\newpage
+
+\begin{table}[H]
+\caption{Begungsdaten für den unbekannten Kristall. $\beta$ in $^\circ$, rate in imp/s.}
+\small
+\begin{tabular}{rr|rr|rr|rr|rr|rr|rr}
+$\beta$ & rate & $\beta$ & rate & $\beta$ & rate & $\beta$ & rate & $\beta$ & rate & $\beta$ & rate & $\beta$ & rate \\
+\hline
+\input{kristall_tab}
+\end{tabular}
+\label{tab:kristall}
+\end{table}
+
+\subsection{Planck'sches Wirkungsquantum}
+
+
+Zusätzlich war das Planck'sche Wirkungsquantum zu bestimmen. Dazu waren weitere Datenreihen gegeben, die in Grafik~\ref{fig:planck} visualisiert sind.
+
+\begin{figure}[H]
+\includegraphics[scale=0.9]{planck.png}
+\caption{Visualisierte Datenreihen des Planck'schen Wirkungsquantums}
+\label{fig:planck}
+\end{figure}
+
+
+
+
+\section{Auswertung}
+\subsection{Analyse von Kristallen}
+Für beide Kristalle können die Maxima gefunden werden. Diese werden dann nach $K_\alpha$ und $K_\beta$ kategorisiert in den Tabellen~\ref{tab:auswertung_nacl} und~\ref{tab:auswertung_unkonwn} zusammengefasst.
+
+\begin{figure}[H]
+\includegraphics[scale=0.7]{daten_nacl.png}
+\caption{Gemessene Röntgenbeugung am NaCl-Kristall mit orange markierten Maxima.}
+\end{figure}
+
+
+
+\begin{figure}[H]
+\includegraphics[scale=0.7]{daten_kristall.png}
+\caption{Gemessene Röntgenbeugung am unbekannten Kristall mit orange markierten Maxima.}
+\end{figure}
+
+
+\begin{table}[H]
+\centering
+\caption{Auswertung der Peaks beim NaCl-Kristall.}
+\label{tab:auswertung_nacl}
+\begin{tabular}{rr|rr}
+\multicolumn{2}{c|}{$K_\beta$} & \multicolumn{2}{c}{$K_\alpha$} \\ 
+$\beta~/~^\circ$ & rate~/~ imp/s & $\beta~/~^\circ$ & rate~/~ imp/s \\
+\hline
+6.3 & 194.53 & 7.1 & 532.37 \\
+12.8 & 40.60 & 14.4 & 101.53 \\
+19.4 & 19.37 & 21.9 & 45.67 \\
+26.4 & 8.07 & 29.9 & 11.10
+\end{tabular}
+\label{tab:peaks_nacl}
+\end{table}
+
+
+\begin{table}[H]
+\centering
+\caption{Auswertung der Peaks beim unbekannten Kristall.}\label{tab:auswertung_unkonwn}
+\begin{tabular}{rr|rr}
+\multicolumn{2}{c|}{$K_\beta$} & \multicolumn{2}{c}{$K_\alpha$} \\ 
+$\beta~/~^\circ$ & rate~/~ imp/s & $\beta~/~^\circ$ & rate~/~ imp/s \\
+\hline
+9.0 & 1360.53 & 10.2 & 3222.50 \\
+18.3 & 186.90 & 20.6 & 581.33 \\
+28.0 & 35.47 & 31.8 & 70.87
+\end{tabular}
+\label{tab:peaks_kristall}
+\end{table}
+
+
+
+
+Nach Gleichung~\eqref{fig:bragg} und $a=2\cdot d$ kann die Gitterkonstante nun berechnet werden. Es gilt mit Fehlerrechnung
+\begin{align}
+a = \frac{n\cdot \lambda}{\sin(\vartheta)} \pm \left( \frac{n\cdot \Delta \lambda}{\sin(\vartheta)} + \frac{n\cdot \lambda}{\sin^2(\vartheta)}\cdot \cos(\vartheta) \cdot \Delta \theta\right)
+\label{eq:gitterkonst_fehler} 
+\end{align}
+
+
+
+\begin{table}[H]
+\centering
+\caption{Berechnung der Gitterkonstante beim NaCl-Kristall.}
+\label{tab:gitterkonst_nacl}
+\begin{tabular}{rr|rr}
+\multicolumn{2}{c|}{$K_\beta$} & \multicolumn{2}{c}{$K_\alpha$} \\ 
+$a$ / pm & $\Delta a$ /pm & $a$ / pm & $\Delta a$ / pm\\
+\hline
+575.0 & 9.1 & 575.1 & 8.1 \\
+569.6 & 4.4 & 571.6 & 3.9 \\
+569.9 & 2.8 & 571.7 & 2.5 \\
+567.6 & 2.0 & 570.4 & 1.7 
+\end{tabular}
+\end{table}
+
+
+
+\begin{table}[H]
+\centering
+\caption{Berechnung der Gitterkonstante beim unbekannten Kristall.}
+\label{tab:gitterkonst_unkonwn}
+\begin{tabular}{rr|rr}
+\multicolumn{2}{c|}{$K_\beta$} & \multicolumn{2}{c}{$K_\alpha$} \\ 
+$a$ / pm & $\Delta a$ /pm & $a$ / pm & $\Delta a$ / pm\\
+\hline
+403.3 & 4.5 & 401.4 & 3.9 \\
+401.9 & 2.1 & 404.0 & 1.9 \\
+403.2 & 1.3 & 404.7 & 1.1
+\end{tabular}
+\end{table}
+
+Als Gitterkonstante für den NaCl-Kristall ergibt sich
+\begin{align*}
+a_\text{NaCl} = (571.4\pm 9.1)~\text{pm}
+\end{align*}
+
+Als Gitterkonstante für den unbekannten Kristall ergibt sich
+\begin{align*}
+a_\text{LiF} = (403.1\pm 4.5)~\text{pm}
+\end{align*}
+
+
+\subsection{Planck'sches Wirkungsquantum}
+
+Für die Bestimmung des Planck'schen Wirkungsquantums wurde über den linearen Teil der Kurven aus Grafik~\ref{fig:planck} eine Regressionsgerade bestimmt, um die Nullstelle zu finden. Das Ergebnis ist in Grafik~\ref{fig:planck_regression} visualisiert. Die Nullstellen finden sich in Tabelle~\ref{tab:planck_calc}. In dieser Tabelle sind zusätzlich die Grenzwellenlängen $\lambda_{\min}$ angegeben, welche mit Gleichung~\eqref{eq:bragg} berechnet wurden. Aus diesen kann letztendlich das Planck'sche Wirkungsquantum mit Formel~\eqref{eq:planck_formel} berechnet werden.
+
+
+\begin{figure}[H]
+\includegraphics[scale=0.9]{planck_regression.png}
+\caption{Visualisierte Datenreihen des Planck'schen Wirkungsquantums mit Regression zum Finden der Nullstelle.}
+\label{fig:planck_regression}
+\end{figure}
+
+
+\begin{table}[H]
+\caption{Nullstellen der Regressionsgeraden und Grenzwellenlängen $\lambda_{\min}$ (berechnet aus Gleichung~\ref{eq:bragg}) für die Bestimmung des Planck'schen Wirkungsquantums}
+\label{tab:planck_calc}
+
+\begin{tabular}{r|rr|r}
+$U$ / kV & $\beta_{\text{\text{rate}=0}}$ / ${}^\circ$ & $\lambda_{\text{min}}$ / pm & $h$ / $10^{-34}$~Js \\
+\hline
+22 & 5.46 & 54.39 & 6.39 \\
+24 & 4.96 & 49.38 & 6.33 \\
+26 & 4.54 & 45.20 & 6.28 \\
+28 & 4.19 & 41.77 & 6.25 \\
+30 & 3.89 & 38.78 & 6.22 \\
+32 & 3.64 & 36.26 & 6.20 \\
+34 & 3.37 & 33.63 & 6.11 \\
+35 & 3.25 & 32.43 & 6.07
+
+\end{tabular}
+\end{table}
+
+
+Durch Mittelung der berechneten Werte für das Planck'sche Wirkungsquantum erhält man insgesamt
+\begin{align*}
+h = (6.23 \pm 0.17)\cdot 10^{-34}~\text{Js}
+\end{align*}
+
+\newpage
+
+\section{Diskussion und Zusammenfassung}
+
+Es wurden folgende Gitterkonstanten berechnet, die mit anderen Quellen (siehe \cite{nacl}, \cite{lif}) übereinstimmen.
+\begin{align*}
+a_\text{NaCl} &= (571.4\pm 9.1)~\text{pm} \\
+a_\text{LiF} &= (403.1\pm 4.5)~\text{pm}
+\end{align*}
+Der unbekannte Kristall dürfte Lithiumfluorid sein, da dieser bei $402.6~$pm liegt (\cite{lif}). Für einen genaueren Wert hätte man den Winkel in kleinere Schritte unterteilen müssen. Zusätzlich lässt sich beobachten, dass die Unsicherheiten für größere Winkel kleiner werden. Dies liegt an der algebraischen Form der Fehlerabschätzung in Gleichung~\eqref{eq:gitterkonst_fehler} und zusätzlich daran, dass beim Messen kleinerer Winkel generell größere Unsicherheiten entstehen.
+
+Es war zusätzlich das Planck'sche Wirkungsquantum zu berechnen, dieses ist
+\begin{align*}
+h = (6.23 \pm 0.17)\cdot 10^{-34}~\text{Js}
+\end{align*}
+Dieses liegt unter dem festgelegten Wert, aber in der richtigen Größenordnung. Die Unsicherheit kommt daher, dass der lineare Teil in Grafik~\ref{fig:planck_regression} per Augenmaß festgelegt wurde. Durch diese Festlegung, wo der lineare Teil beginnt oder endet, können systematische Fehler entstehen, die das Ergebnis verfälschen.
+
+
+
+
+\begin{thebibliography}{9}
+\bibitem{moodle} S. Surnev: Skript zur Röntgenbeugung aus dem Moodle der Karl-Franzens Universität, Institut für Physik, 26.04.2021.
+\bibitem{daten} S. Surnev: Daten zur Röntgenbeugung aus dem Moodle der Karl-Franzens Universität, Institut für Physik, 26.04.2021.
+\bibitem{messmethoden}  R. Dämon: Einführung in die physikalischen Messmethoden, Graz 2016.
+\bibitem{nacl} \url{https://www.chemie.de/lexikon/Natriumchlorid-Struktur.html}, 05.06.2021.
+\bibitem{lif} \url{https://de.wikipedia.org/wiki/Lithiumfluorid}, 05.05.2021.
+\end{thebibliography}
+
+
+\newpage 
+\appendix
+\section{Python Skript}
+
+
+
+\definecolor{commentgreen}{RGB}{2,112,10}
+\definecolor{eminence}{RGB}{108,48,130}
+\definecolor{weborange}{RGB}{255,165,0}
+\definecolor{frenchplum}{RGB}{129,20,83}
+
+\lstdefinelanguage{python}{
+    morekeywords={def, for, range, abs, return},
+    otherkeywords={<-,->, |>, \%\{, \}, \{, \, (, )},
+    sensitive=true,
+    morecomment=[l]{\#},
+    morecomment=[n]{/*}{*/},
+    morecomment=[s][\color{purple}]{:}{\ },
+    morestring=[s][\color{orange}]"",
+    commentstyle=\color{commentgreen},
+    keywordstyle=\color{eminence},
+    stringstyle=\color{red},
+	basicstyle=\ttfamily,
+	breaklines,
+	showstringspaces=false,
+	frame=tb
+}
+%\lstinputlisting[language=Python,captionpos=b, label=lst:test,caption={Laplace Auswertung}]{generate_numbers_laplace.py}
+
+%\lstinputlisting[language=Python,captionpos=b, label=lst:test,caption={Bessel Auswertung}]{generate_numbers_bessel.py}
+
+
+
+\end{document}
