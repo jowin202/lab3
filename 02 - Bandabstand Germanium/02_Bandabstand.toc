@@ -1,0 +1,13 @@
+\contentsline {section}{Inhaltsverzeichnis}{2}%
+\contentsline {section}{\numberline {1}Aufgabenstellung}{3}%
+\contentsline {section}{\numberline {2}Grundlagen}{3}%
+\contentsline {subsection}{\numberline {2.1}Halbleiter}{3}%
+\contentsline {subsection}{\numberline {2.2}Dotierung}{3}%
+\contentsline {subsection}{\numberline {2.3}Formeln zur Berechnung}{3}%
+\contentsline {section}{\numberline {3}Versuchsaufbau}{4}%
+\contentsline {section}{\numberline {4}Geräteliste}{4}%
+\contentsline {section}{\numberline {5}Durchführung und Messergebnisse}{5}%
+\contentsline {section}{\numberline {6}Auswertung}{6}%
+\contentsline {section}{\numberline {7}Diskussion}{10}%
+\contentsline {section}{\numberline {8}Zusammenfassung}{10}%
+\contentsline {section}{\numberline {9}Literaturverzeichnis}{10}%
